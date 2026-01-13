@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<title>今天吃什麼</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<style>
+body{
+  margin:0;
+  height:100vh;
+  background:linear-gradient(135deg,#ffecd2,#fcb69f);
+  font-family:"Microsoft JhengHei",Arial;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+}
+.container{
+  width:90%;
+  max-width:360px;
+  text-align:center;
+}
+h1{
+  font-size:26px;
+}
+.card{
+  background:#fff;
+  border-radius:16px;
+  padding:40px 20px;
+  font-size:32px;
+  font-weight:bold;
+  margin:30px 0;
+  box-shadow:0 10px 25px rgba(0,0,0,.15);
+}
+button{
+  width:100%;
+  padding:16px;
+  font-size:22px;
+  border:none;
+  border-radius:12px;
+  background:#ff7a18;
+  color:#fff;
+}
+</style>
+</head>
+<body>
+
+<div class="container">
+  <h1>今天吃什麼？</h1>
+  <div class="card" id="result">🍽️</div>
+  <button onclick="pick()">幫我選</button>
+</div>
+
+<script>
+const foods=["餐車","好鄰居","炭烤","西多士","刈包","油飯","麵線"];
+function pick(){
+  result.textContent = foods[Math.floor(Math.random()*foods.length)];
+}
+</script>
+
+</body>
+</html>
